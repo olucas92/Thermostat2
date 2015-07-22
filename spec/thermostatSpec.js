@@ -34,6 +34,10 @@ describe("maximum and minimum temperature", function(){
     expect(thermostat.maxTemp).toEqual(32)
   });
 
+  it("should have a minimum temperature of 10 degrees", function(){
+    expect(thermostat.minTemp).toEqual(10)
+  });
+
 });
 
 
