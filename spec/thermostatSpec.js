@@ -50,5 +50,16 @@ describe("maximum and minimum temperature", function(){
 
 });
 
+describe("reset capabilities", function(){
+
+  it("should go back to 20 degrees after being reset", function(){
+    thermostat.increaseTemp(5)
+    expect(thermostat.temperature).toEqual(25)
+    thermostat.resetButton()
+    expect(thermostat.temperature).toEqual(20)
+  });
+
+});
+
 
 });
