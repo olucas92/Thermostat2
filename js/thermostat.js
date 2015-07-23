@@ -23,3 +23,6 @@ Thermostat.prototype.decreaseTemp = function(changeTempBy) {
   };
 }
 
+Thermostat.prototype.resetButton = function(){
+  this.temperature = 20
+};
