@@ -38,6 +38,11 @@ describe("maximum and minimum temperature", function(){
     expect(thermostat.minTemp).toEqual(10)
   });
 
+  it("temperature should not be able to go above 32 degrees", function(){
+    thermostat.increaseTemp(25)
+    expect(thermostat.temperature).toEqual(32)
+  });
+
 });
 
 
