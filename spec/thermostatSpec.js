@@ -43,6 +43,11 @@ describe("maximum and minimum temperature", function(){
     expect(thermostat.temperature).toEqual(32)
   });
 
+  it("temperature should not be able to go below 10 degrees", function(){
+    thermostat.decreaseTemp(40)
+    expect(thermostat.temperature).toEqual(10)
+  });
+
 });
 
 
