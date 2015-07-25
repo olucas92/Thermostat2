@@ -61,5 +61,13 @@ describe("reset capabilities", function(){
 
 });
 
+describe("power save mode", function(){
+
+  it("should have a maximum temperature of 25 degrees when power save is on", function(){
+    thermostat.powerSave()
+    expect(thermostat.maxTemp).toEqual(25)
+  });
+});
+
 
 });
