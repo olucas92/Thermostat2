@@ -39,4 +39,5 @@ Thermostat.prototype.temperatureColour = function(){
   else if(this.temperature < 19) {
     this.energyColour = "blue"
   }
+  else {this.energyColour = "green"}
 };
