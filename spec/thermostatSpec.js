@@ -78,6 +78,12 @@ describe("power save mode", function(){
 
 describe("colour co-ordination", function(){
 
+  it("should be green when between 19 and 24 degrees", function(){
+    thermostat.increaseTemp(3)
+    thermostat.temperatureColour()
+    expect(thermostat.energyColour).toEqual("green")
+  });
+
   it("should be red when over 25 degrees", function(){
     thermostat.increaseTemp(10)
     thermostat.temperatureColour()
@@ -89,6 +95,7 @@ describe("colour co-ordination", function(){
     thermostat.temperatureColour()
     expect(thermostat.energyColour).toEqual("blue")
   });
+
 });
 
 
