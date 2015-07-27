@@ -2,6 +2,7 @@ var Thermostat = function() {
   this.temperature = 20
   this.maxTemp = 32
   this.minTemp = 10
+  this.energyColour = "green"
 };
 
 Thermostat.prototype.increaseTemp = function(changeTempBy) {
@@ -29,4 +30,10 @@ Thermostat.prototype.resetButton = function(){
 
 Thermostat.prototype.powerSave = function(){
   this.maxTemp = 25
+};
+
+Thermostat.prototype.temperatureColour = function(){
+  if(this.temperature > 24) {
+    this.energyColour = "red"
+  }
 };
