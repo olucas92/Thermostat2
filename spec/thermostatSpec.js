@@ -83,6 +83,12 @@ describe("colour co-ordination", function(){
     thermostat.temperatureColour()
     expect(thermostat.energyColour).toEqual("red")
   });
+
+  it("should be blue when under 19 degrees", function(){
+    thermostat.decreaseTemp(10)
+    thermostat.temperatureColour()
+    expect(thermostat.energyColour).toEqual("blue")
+  });
 });
 
 
