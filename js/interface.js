@@ -16,3 +16,13 @@ var updateColour = function(){
 var removeColour= function(){
   $('#energy-colour').removeClass();
 };
+
+$document.ready(function(){
+  updateTemperature();
+
+  $('#increase-temperture').on('click', function(){
+    thermostat.increaseTemperature(1)
+    updateTemperature();
+  });
+  
+});
