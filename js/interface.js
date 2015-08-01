@@ -20,9 +20,14 @@ var removeColour= function(){
 $document.ready(function(){
   updateTemperature();
 
-  $('#increase-temperture').on('click', function(){
-    thermostat.increaseTemperature(1)
+  $('#increase-temperature').on('click', function(){
+    thermostat.increaseTemp(1)
     updateTemperature();
   });
-  
+
+  $('#decrease-temperature').on('click', function(){
+    thermostat.decreaseTemp(1)
+    updateTemperature();
+  });
+
 });
